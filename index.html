@@ -1,89 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Your Name</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+    /* ... (other styles) ...*/
 
     header {
-      background: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* ... Other header styles */
       position: relative; /* Needed for positioning the canvas */
       overflow: hidden;  /* Keep particles inside the header */
-    }
-
-    h1 {
-      margin-bottom: 0; /* Remove default margin */
-      z-index: 1;   /* Ensure text is above particles */
-    }
-
-    nav ul {
-      padding: 0;
-      list-style: none;
-      z-index: 1;   /* Ensure navigation is above particles */
-
-    }
-
-    nav li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1;  /*Ensure sections are above the particles */
-    }
-
-    hr {
-      border: 0;
-      height: 1px;
-      background-color: #ccc;
-      margin: 20px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #333;
-      color: #fff;
-      font-size: small;
-        bottom: 0; /* Ensure footer is at bottom */
-    position: relative;/* Needed for correct placement below sections*/
-      width: 100%;
-      z-index: 1;  /* Ensure the footer is above the particles */
-
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-      padding-left: 0;
-    }
-
-    a:hover {
-      color: blue;
+      
     }
 
     #particle-canvas {
@@ -94,29 +22,19 @@
       height: 100%;
       z-index: -1; /* Place canvas behind other header content */
       pointer-events: none; /* Allow mouse events to pass through */
+   
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <canvas id="particle-canvas"></canvas>
-    <h1>Your Name</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header>
+    <canvas id="particle-canvas"></canvas>  </header>
 
-  <section id="about">
-  </section>
-    <!-- rest of body -->
+
 
 <script>
-const canvas = document.getElementById('particle-canvas');
+  const canvas = document.getElementById('particle-canvas');
   const ctx = canvas.getContext('2d');
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
@@ -213,5 +131,57 @@ const canvas = document.getElementById('particle-canvas');
   });
 </script>
 
+<body>
+
+  <header>
+    <h1>Your Name</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li> 
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Write a brief and engaging introduction about yourself. Highlight your skills, interests, and aspirations. </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+        <ul>
+            <li>
+              <h3>Project 1 Title</h3>
+              <p>A brief description of project 1. Include a link if available: <a href="your-project-link">Project Link</a></p> 
+            </li>
+            <hr> <li>
+              <h3>Project 2 Title</h3>
+              <p>A brief description of project 2. You can include technologies used, challenges faced, and outcomes.</p>
+            </li>
+           <!-- Add more project list items as needed -->
+          </ul>
+
+
+  </section>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p> Provide ways for people to connect with you:  </p>
+    <ul>
+      <li><strong>Email:</strong> your.email@example.com</li>
+      <li><strong>GitHub:</strong> <a href="your-github-profile">github.com/yourusername</a></li>
+      <!-- Add other contact methods like LinkedIn, Twitter, etc. -->
+    </ul>
+  </section>
+
+  <footer>
+    © 2023 Your Name
+  </footer>
+
 </body>
+
 </html>
